@@ -7,7 +7,7 @@ object scalaprojects
   def main(args:Array[String])
   {
 
-    val conf = new SparkConf().setAppName("scalaprojects")
+    val conf = new SparkConf().setAppName("scalaprojects").setMaster("local")
     val sc = new SparkContext(conf)
 
     val file = sc.textFile("/user/arunvr4912/listofwords")
